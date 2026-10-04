@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cornell Engineering · Clare Gartz</title>
+  <style>
+    :root { --bg: #f6efe6; --surface: #fff; --text: #2a2422; --muted: #6d625c; --border: #e7dccf; --accent: #b31b1b; --accent-soft: #fbeceb; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.65 "Times New Roman", Times, serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 24px 64px; }
+    .back { display: block; width: fit-content; font-weight: 600; font-size: .92rem; text-decoration: none; margin-bottom: 32px; }
+    .back:hover { text-decoration: underline; }
+    .eyebrow { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: .82rem; font-weight: 600; margin-bottom: 14px; }
+    h1, h2 { font-family: "Times New Roman", Times, serif; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin: 0 0 8px; }
+    .sub { color: var(--muted); font-size: 1.1rem; margin: 0 0 32px; }
+    h2 { font-size: 1.35rem; margin: 36px 0 12px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag { font-size: .8rem; font-weight: 500; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+    .btn { display: inline-block; margin-top: 12px; padding: 10px 20px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
+    @media (max-width: 640px) { .wrap { padding: 24px 16px 48px; } body { font-size: 16px; } }
+    /* Soft gray + lavender sketchbook look, matching the desk page */
+    :root { --bg: #e9e8ec; --surface: #f5f4f7; --text: #2f2a36; --muted: #6c6576; --border: #a993dd; --accent: #7a64bd; --accent-soft: #e6def8; }
+    body { background: var(--bg); color: var(--text); font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    h1, h2, h3, .logo { font-family: "Times New Roman", Times, serif; }
+    header { background: rgba(233, 232, 236, .92); border-bottom: 2px solid var(--border); }
+    section { border-top: 0; }
+    .card, .facts, .link-card { background: var(--surface); border: 2px solid var(--border); border-radius: 22px 8px 26px 10px / 10px 26px 8px 22px; }
+    .card:hover, .link-card:hover { border-color: var(--accent); transform: rotate(-1deg); }
+    .btn { border: 2px solid var(--border); border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; }
+    .btn-primary, a.btn:not(.btn-ghost) { background: #c9b9f0; color: #2f2a36; }
+    .btn-ghost { color: var(--accent); }
+    .eyebrow, .tag { border: 1.5px solid var(--border); border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-style: italic; }
+    .timeline li { border-bottom: 1.5px dashed #cfc8db; }
+    footer { border-top: 2px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to the desk</a>
+    <span class="eyebrow">Education</span>
+    <h1>Cornell Engineering</h1>
+    <p class="sub">B.S. in Operations Research &amp; Engineering, Mathematics minor · Ithaca, NY · Aug 2026 – May 2030</p>
+    <div class="card">
+      <p>I'm a first-year in Cornell's College of Engineering. Operations Research is the math of making better decisions: optimization, probability, statistics, and modeling applied to real systems. I'm especially interested in using it for social impact and sustainability.</p>
+    </div>
+    <h2>This semester</h2>
+    <div class="tags"><span class="tag">ENGRI 1101</span><span class="tag">MATH 1920</span><span class="tag">PHYS 1112</span><span class="tag">PHYS 1110</span><span class="tag">MUSIC 1701</span></div>
+    <h2>Related coursework</h2>
+    <ul>
+      <li>Multivariable Calculus</li>
+      <li>Data Science and Decision Making</li>
+      <li>Physics 1</li>
+      <li>Experimental Physics</li>
+    </ul>
+    <h2>Skills</h2>
+    <div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">Statistics</span><span class="tag">Data Analysis</span><span class="tag">Mathematical Modeling</span><span class="tag">LaTeX</span></div>
+    <h2>Interests</h2>
+    <div class="tags"><span class="tag">Optimization</span><span class="tag">Social Impact</span><span class="tag">Decision Science</span><span class="tag">Sustainability</span></div>
+  </div>
+</body>
+</html>
