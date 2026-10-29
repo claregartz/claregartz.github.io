@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freedge Tracker · Clare Gartz</title>
+  <style>
+    :root { --bg: #f6efe6; --surface: #fff; --text: #2a2422; --muted: #6d625c; --border: #e7dccf; --accent: #b31b1b; --accent-soft: #fbeceb; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.65 "Times New Roman", Times, serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 24px 64px; }
+    .back { display: block; width: fit-content; font-weight: 600; font-size: .92rem; text-decoration: none; margin-bottom: 32px; }
+    .back:hover { text-decoration: underline; }
+    .eyebrow { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: .82rem; font-weight: 600; margin-bottom: 14px; }
+    h1, h2 { font-family: "Times New Roman", Times, serif; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin: 0 0 8px; }
+    .sub { color: var(--muted); font-size: 1.1rem; margin: 0 0 32px; }
+    h2 { font-size: 1.35rem; margin: 36px 0 12px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag { font-size: .8rem; font-weight: 500; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+    .btn { display: inline-block; margin-top: 12px; padding: 10px 20px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
+    @media (max-width: 640px) { .wrap { padding: 24px 16px 48px; } body { font-size: 16px; } }
+    /* Soft gray + lavender sketchbook look, matching the desk page */
+    :root { --bg: #e9e8ec; --surface: #f5f4f7; --text: #2f2a36; --muted: #6c6576; --border: #a993dd; --accent: #7a64bd; --accent-soft: #e6def8; }
+    body { background: var(--bg); color: var(--text); font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    h1, h2, h3, .logo { font-family: "Times New Roman", Times, serif; }
+    header { background: rgba(233, 232, 236, .92); border-bottom: 2px solid var(--border); }
+    section { border-top: 0; }
+    .card, .facts, .link-card { background: var(--surface); border: 2px solid var(--border); border-radius: 22px 8px 26px 10px / 10px 26px 8px 22px; }
+    .card:hover, .link-card:hover { border-color: var(--accent); transform: rotate(-1deg); }
+    .btn { border: 2px solid var(--border); border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; }
+    .btn-primary, a.btn:not(.btn-ghost) { background: #c9b9f0; color: #2f2a36; }
+    .btn-ghost { color: var(--accent); }
+    .eyebrow, .tag { border: 1.5px solid var(--border); border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-style: italic; }
+    .timeline li { border-bottom: 1.5px dashed #cfc8db; }
+    footer { border-top: 2px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html">← Back to the desk</a>
+    <span class="eyebrow">Kappa Theta Pi × Food Recovery Network · Fall 2026</span>
+    <h1>Free Food Freedge</h1>
+    <p class="sub">A live tracker for what's in Cornell Food Recovery Network's community free fridge.</p>
+    <div class="card">
+      <p>Cornell's Food Recovery Network (FRN) stocks a community "freedge" (free fridge) with food that would otherwise go to waste. Until now, what was inside was tracked through a group chat and a Google Form, so anyone who hadn't checked them had no idea what was available.</p>
+      <p style="margin-bottom:0">As a Kappa Theta Pi project for FRN, I co-built a phone-friendly web app that answers "what's in the freedge?" at a glance. The list updates live for everyone, so the whole community helps keep it accurate.</p>
+    </div>
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>See what's inside:</strong> open the virtual fridge door to see each item, how much is left, and when it was last updated.</li>
+      <li><strong>Add, take, or mark empty:</strong> anyone can add food, take some, or mark an item gone when the fridge doesn't match the app. Adding a food that's already there adds to it instead of making a duplicate.</li>
+      <li><strong>Allergen safety:</strong> everyone who adds food has to say which of 9 common allergens it contains (or that they're not sure). Unknown items show a warning, so a blank is never mistaken for "safe."</li>
+      <li><strong>Vegan and vegetarian tags:</strong> optional labels, with checks that block contradictions like "vegan" food that contains milk.</li>
+      <li><strong>Undo and feedback:</strong> an undo button for your last change, plus a way for users to send feedback to the team.</li>
+    </ul>
+    <h2>What I used</h2>
+    <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML &amp; CSS</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Git &amp; GitHub</span></div>
+    <p>Built with Charvi Kanna and Anya Dennison.</p>
+    <a class="btn" style="margin-right:8px" href="https://freefoodfreedge.com" target="_blank" rel="noopener">Visit freefoodfreedge.com →</a>
+    <a class="btn" href="https://github.com/claregartz/KTPhoodRecovery" target="_blank" rel="noopener">View the code on GitHub →</a>
+  </div>
+</body>
+</html>
