@@ -78,6 +78,12 @@
     .facts dt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
     .facts dd { margin: 2px 0 14px; }
     .facts dd:last-child { margin-bottom: 0; }
+    .hero-row { display: flex; align-items: center; gap: 48px; }
+    .hero-text { min-width: 0; }
+    .headshot {
+      display: block; flex-shrink: 0; width: 220px; height: 220px; border-radius: 50%;
+      object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 0 2px var(--border), 0 8px 24px rgba(60,40,90,.12);
+    }
 
     /* Projects */
     .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
@@ -135,6 +141,8 @@
       nav ul { gap: 16px; }
       nav ul a { font-size: 0.88rem; }
       .hero { padding: 56px 16px 48px; }
+      .hero-row { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .headshot { width: 140px; height: 140px; }
       section { padding: 48px 0; }
       .about-grid { grid-template-columns: 1fr; gap: 24px; }
       .timeline li { grid-template-columns: 1fr; gap: 4px; }
@@ -182,13 +190,16 @@
   </header>
 
   <main id="top">
-    <div class="wrap hero">
+    <div class="wrap hero hero-row">
+      <img class="headshot" src="images/headshot.jpg" alt="Clare Gartz" width="220" height="220">
+      <div class="hero-text">
       <span class="eyebrow">Cornell Engineering · Class of 2030</span>
       <h1>Hi, I'm Clare.</h1>
       <p>I'm a first-year student at Cornell University studying Operations Research and Engineering with a minor in Mathematics. I want to use math to solve real-world problems and make better decisions.</p>
       <div class="buttons">
         <a class="btn btn-primary" href="#projects">See my work</a>
         <a class="btn btn-ghost" href="resume.pdf?v=20261118b" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
       </div>
     </div>
 
