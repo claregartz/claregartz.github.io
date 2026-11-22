@@ -1,0 +1,117 @@
+/* Shared site style ("Studio"): lavender + paper grain, straight edges,
+   Newsreader serif with small Inter labels. Loaded after each page's own <style>;
+   :root:root outranks the per-page :root and :root[data-theme] rules. */
+
+/* Tokens (names cover both the desk page and the text pages) */
+:root:root {
+  --f-display: "Newsreader", "Times New Roman", Times, serif;
+  --f-body: "Newsreader", "Times New Roman", Times, serif;
+  --f-ui: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --r: 12px; --r-btn: 8px;
+  --bg: #ebeaef; --paper: #ebeaef;
+  --surface: #f7f6fa; --card-bg: #f7f6fa; --pill-bg: #f7f6fa;
+  --text: #2a2532; --ink: #2a2532; --pencil: #2f2a36;
+  --muted: #625b6d;
+  --border: #cfc6e6; --pill-border: #cfc6e6; --rule: #d8d3e3;
+  --accent: #5e4aa6; --accent-soft: #e4ddf6;
+  --btn: #5e4aa6; --btn-text: #fff;
+  --glow: #ddd4f2;
+}
+
+/* ================= base ================= */
+:root:root body {
+  background-color: var(--bg); color: var(--text);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+}
+:root:root :is(h1, h2, h3, .logo, .name) { font-family: var(--f-display); text-wrap: balance; }
+:root:root a { color: var(--accent); }
+
+/* --- header / nav (about page) --- */
+:root:root header { background: color-mix(in srgb, var(--bg) 90%, transparent); border-bottom: 1px solid var(--rule); }
+:root:root nav ul a { font-family: var(--f-ui); font-size: .9rem; color: var(--muted); }
+:root:root nav ul a:hover { color: var(--text); }
+:root:root .logo { font-size: 1.1rem; }
+
+/* --- desk header --- */
+:root:root .name { font-weight: 600; letter-spacing: -0.015em; }
+:root:root .tagline { font-family: var(--f-ui); font-style: normal; font-size: .95rem; letter-spacing: .01em; }
+:root:root .pill {
+  font-family: var(--f-ui); font-weight: 600; font-size: .92rem;
+  border: 1px solid var(--pill-border); border-radius: var(--r-btn);
+  background: var(--pill-bg); color: var(--text);
+}
+:root:root .pill:hover { transform: translateY(-1px); border-color: var(--accent); }
+:root:root .pill.primary { background: var(--btn); border-color: var(--btn); color: var(--btn-text); }
+:root:root .icon-link { height: 36px; width: 38px; }
+:root:root .hint { font-family: var(--f-ui); font-style: normal; font-size: .92rem; }
+:root:root .wall-glow { fill: var(--glow); }
+
+/* desk list of links */
+:root:root .index h2 { font-size: 1.25rem; }
+:root:root .index a {
+  border: 1px solid var(--border); border-radius: var(--r); background: var(--card-bg);
+  font-family: var(--f-ui); font-weight: 600; font-size: .95rem;
+}
+:root:root .index a:hover { transform: translateY(-2px); border-color: var(--accent); }
+:root:root .index a span { font-style: normal; font-weight: 400; font-size: .85rem; }
+
+/* hover bubble on the desk */
+:root:root .bubble {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--r);
+  box-shadow: 0 8px 24px rgba(30, 24, 40, .12); transform: translateY(4px);
+  font-family: var(--f-body); font-size: .95rem;
+}
+:root:root .bubble.show { transform: none; }
+:root:root .bubble strong { font-family: var(--f-display); }
+:root:root .bubble .go { color: var(--accent); font-family: var(--f-ui); font-style: normal; font-size: .85rem; }
+
+/* --- about hero --- */
+:root:root .hero { padding-top: 80px; padding-bottom: 64px; }
+:root:root .hero h1 { font-weight: 600; letter-spacing: -0.025em; }
+:root:root .hero p { font-size: 1.15rem; }
+:root:root :is(.eyebrow, .tag) { font-style: normal; font-family: var(--f-ui); border: 0; }
+:root:root .eyebrow {
+  background: none; padding: 0; border-radius: 0; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 600;
+}
+:root:root .tag { border-radius: var(--r-btn); background: var(--accent-soft); color: var(--accent); font-size: .74rem; padding: 3px 9px; }
+:root:root .btn {
+  font-family: var(--f-ui); font-weight: 600; font-size: .92rem;
+  border: 1px solid var(--accent); border-radius: var(--r-btn);
+}
+:root:root :is(.btn-primary, a.btn:not(.btn-ghost)) { background: var(--btn); border-color: var(--btn); color: var(--btn-text); }
+:root:root .btn-ghost { background: transparent; color: var(--accent); border-color: var(--border); }
+:root:root .btn:hover { transform: translateY(-1px); }
+
+/* --- sections --- */
+:root:root section { border-top: 1px solid var(--rule); }
+:root:root section h2 { font-size: 1.85rem; font-weight: 600; letter-spacing: -0.015em; }
+:root:root :is(.card, .facts, .link-card) {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+}
+:root:root :is(.card, .link-card):hover { transform: translateY(-2px); border-color: var(--accent); }
+:root:root .card h3 { font-size: 1.15rem; }
+:root:root .card-link { font-family: var(--f-ui); font-size: .88rem; }
+:root:root .facts dt { font-family: var(--f-ui); font-size: .72rem; letter-spacing: .1em; }
+:root:root .timeline li { border-bottom: 1px solid var(--rule); }
+:root:root .when { font-family: var(--f-mono); font-size: .82rem; font-variant-numeric: tabular-nums; }
+:root:root .org { font-family: var(--f-ui); font-size: .95rem; font-weight: 600; }
+:root:root .subhead { font-size: 1.2rem; }
+:root:root .link-card { font-family: var(--f-ui); }
+:root:root .link-card svg { fill: var(--accent); }
+:root:root footer { border-top: 1px solid var(--rule); font-family: var(--f-ui); font-size: .85rem; }
+
+/* --- org / project subpages --- */
+:root:root .back { font-family: var(--f-ui); font-size: .88rem; }
+:root:root .sub { font-family: var(--f-ui); font-size: 1.05rem; }
+:root:root .wrap > h2 { font-size: 1.3rem; }
+
+/* ================= small flourishes ================= */
+/* tagline under the name: upright serif */
+:root:root .tagline { font-family: var(--f-body); font-style: normal; font-size: 1.02rem; }
+:root:root .hero h1 { font-weight: 500; }
+
+@media (prefers-reduced-motion: reduce) { :root:root * { transition: none !important; } }
+
